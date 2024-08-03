@@ -13,7 +13,7 @@
 
 
 
-<title>Hello World | Hexo</title>
+<title>CS61A Hog复盘及感想 | Hexo</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">CS61A Hog复盘及感想</h1>
             
                 <div class="post-meta">
                     
@@ -205,28 +205,27 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">July 27, 2024&nbsp;&nbsp;15:36:13</a>
+                        Date: <a href="#">August 3, 2024&nbsp;&nbsp;20:41:14</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/CS61A/">CS61A</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>按照课表的话，我的进度即将踏入第四周（hw03还没完成），现在才做完Hog，还是因为对这种作业项目还是有点害怕的，但这第一个项目也是很友好，有一点点基础的我只要读了文档要求基本都可以写出来。学到现在这个课程所带给我的震撼真的很大，怎样的夸赞都不为过，为了让你明白文档的要求，课程在问题的下面设置基于ok的选择或问答题帮助你理解。文档虽然是英语的，但只要看多了还是很容易熟悉这些术语的，主要的困难就是长难句不太符合中文的习惯，慢慢阅读和实时翻译是个好办法，翻译软件翻不懂直接复制给GPT解释，还是很好解决的。ok评分机制带给打怪升级的体验，类似<code>Accept</code>的爽点。</p>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>P1陷阱<code>dice()</code>如果传入的是文档中的测试函数，其作为一个表达式使用一次，他的值都会被改变</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过测试的</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">have_one = <span class="literal">False</span></span><br><span class="line"><span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">    a = dice()</span><br><span class="line">    score += a</span><br><span class="line">    <span class="keyword">if</span> a == <span class="number">1</span>:</span><br><span class="line">        have_one = <span class="literal">True</span></span><br><span class="line">    num_rolls -= <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> have_one:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 未通过的</span></span><br><span class="line">    score = <span class="number">0</span></span><br><span class="line">    have_one = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">        score += dice()</span><br><span class="line">        <span class="keyword">if</span> dice() == <span class="number">1</span>:</span><br><span class="line">            have_one = <span class="literal">True</span></span><br><span class="line">        num_rolls -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> have_one:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure>
+<p>P5中我的源文件在test中05.py这个文件中，文档测试这个r是有问题的。其他的测试点最后都是Game over 只有这个是r ，改过来就测试过了。我以为是文档的问题，但打开我原来下载的安装包又没有问题（还是game over）我也没有改过这个文件···   不知道什么原因，但终究是过了<br>![[Pasted image 20240802170511.png]]<br>操，调了一个半钟的P9，终于想出来了啊啊啊啊啊啊啊啊啊啊哇啊啊啊啊啊<br>![[Pasted image 20240803164542.png]]<br>后面就简单了，成功拿下：<br>![[Pasted image 20240803170437.png]]</p>
 
         </div>
 
@@ -241,7 +240,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2024/07/27/hello-world/">http://example.com/2024/07/27/hello-world/</a></span>
+                        <span><a href="http://example.com/2024/08/03/CS61A-Hog%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%84%9F%E6%83%B3/">http://example.com/2024/08/03/CS61A-Hog%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%84%9F%E6%83%B3/</a></span>
                     </p>
                 
                 
@@ -264,6 +263,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/CS61A/"># CS61A</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -274,8 +277,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/07/29/%E6%98%A8%E6%97%A5%E6%89%80%E6%83%B3%E4%BA%8C%E4%B8%89%E4%BA%8B/">昨日所想二三事</a>
             
+            <a class="next" rel="next" href="/2024/07/29/%E6%98%A8%E6%97%A5%E6%89%80%E6%83%B3%E4%BA%8C%E4%B8%89%E4%BA%8B/">昨日所想二三事</a>
             
         </section>
 
