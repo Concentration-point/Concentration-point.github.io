@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="author" content="John Doe">
+    <meta name="author" content="集中一点">
 
 
 
@@ -200,7 +200,7 @@
             
                 <div class="post-meta">
                     
-                        Author: <a itemprop="author" rel="author" href="/">John Doe</a>
+                        Author: <a itemprop="author" rel="author" href="/">集中一点</a>
                     
 
                     
@@ -225,7 +225,7 @@
 <h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>P1陷阱<code>dice()</code>如果传入的是文档中的测试函数，其作为一个表达式使用一次，他的值都会被改变</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过测试的</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">have_one = <span class="literal">False</span></span><br><span class="line"><span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">    a = dice()</span><br><span class="line">    score += a</span><br><span class="line">    <span class="keyword">if</span> a == <span class="number">1</span>:</span><br><span class="line">        have_one = <span class="literal">True</span></span><br><span class="line">    num_rolls -= <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> have_one:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 未通过的</span></span><br><span class="line">    score = <span class="number">0</span></span><br><span class="line">    have_one = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">        score += dice()</span><br><span class="line">        <span class="keyword">if</span> dice() == <span class="number">1</span>:</span><br><span class="line">            have_one = <span class="literal">True</span></span><br><span class="line">        num_rolls -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> have_one:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure>
-<p>P5中我的源文件在test中05.py这个文件中，文档测试这个r是有问题的。其他的测试点最后都是Game over 只有这个是r ，改过来就测试过了。我以为是文档的问题，但打开我原来下载的安装包又没有问题（还是game over）我也没有改过这个文件···   不知道什么原因，但终究是过了<br>![[Pasted image 20240802170511.png]]<br>操，调了一个半钟的P9，终于想出来了啊啊啊啊啊啊啊啊啊啊哇啊啊啊啊啊<br>![[Pasted image 20240803164542.png]]<br>后面就简单了，成功拿下：<br>![[Pasted image 20240803170437.png]]</p>
+<p>P5中我的源文件在test中05.py这个文件中，文档测试这个r是有问题的。其他的测试点最后都是Game over 只有这个是r ，改过来就测试过了。我以为是文档的问题，但打开我原来下载的安装包又没有问题（还是game over）我也没有改过这个文件···   不知道什么原因，但终究是过了<br><img src="/image/1.png"><br>操，调了一个半钟的P9，终于想出来了啊啊啊啊啊啊啊啊啊啊哇啊啊啊啊啊<br><img src="/image/2.png"><br>后面就简单了，成功拿下：<br><img src="/image/3.png"></p>
 
         </div>
 
@@ -234,7 +234,7 @@
                 
                     <p class="copyright-item">
                         <span>Author:</span>
-                        <span>John Doe</span>
+                        <span>集中一点</span>
                     </p>
                 
                 
@@ -289,7 +289,7 @@
             </div>
             <footer id="footer" class="footer">
     <div class="copyright">
-        <span>© John Doe | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        <span>© 集中一点 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
