@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="集中一点">
+
+
+
+
+
+<title>Cat复盘 | Hexo</title>
+
+
+
+    <link rel="icon" href="/s001.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Concentration&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Concentration&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Cat复盘</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">集中一点</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">August 18, 2024&nbsp;&nbsp;16:51:36</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/CS61A/">CS61A</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>对于<em>prombel5</em><code>autocorrect</code>中的要求：差异值相同时，输出列表靠前的单词，最开始以为自己灵机一动——倒序循环，一直更新(可以免去判断位置前后的判断)，这样就可以取出最小最靠前的啦，于是便有了下面的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">res = <span class="number">1000</span></span><br><span class="line">check = about2(word_list)</span><br><span class="line"><span class="keyword">if</span> check(typed_word):</span><br><span class="line">    <span class="keyword">return</span> typed_word</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment">#从后往前免去一个判断——靠前输出</span></span><br><span class="line">    word_list.reverse()  <span class="comment"># 反转</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> word_list:</span><br><span class="line">        pre = res   </span><br><span class="line">        diff = diff_function(typed_word,x,limit)</span><br><span class="line">        res = <span class="built_in">min</span>(res,diff)</span><br><span class="line">        <span class="keyword">if</span> pre != res <span class="keyword">or</span> diff - pre == <span class="number">0</span>:</span><br><span class="line">            final = x</span><br><span class="line">    <span class="keyword">if</span> res &lt;= limit:</span><br><span class="line">        <span class="keyword">return</span> final</span><br><span class="line">    <span class="keyword">return</span> typed_word</span><br></pre></td></tr></table></figure><br>由于判断条件多，设置了很多量来存储，隐隐约约能感觉到写的很冗余，测试的时候只过了103个 <em>(一共104个，其实在第四个就测试不过了，查完测试文档，我想知道是否只有这个过不了，就把他删再测试结果剩下103个全过)</em>，第四个的word_list是一个有几十万个单词的列表，我去查了其中的文档，找他的测试案例编写了一个相对位置一样的简化例子，简化例子能输出正确答案，我不知道哪里出了问题<br><img src="https://cdn.jsdelivr.net/gh/Concentration-point/image/20240818-1.png" alt=""><br>去问了GPT，他认为我的反转带来了错误，我解释完我的代码他又认可了(他之前忽略了我其中一个判断条件<code>diff - pre == 0</code>，这是防止差异值相同的判断。）依旧没找出问题，但GPT写的代码就很简洁了，值得学习，我冗余的部分被修改的明明白白：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">check = about2(word_list)</span><br><span class="line"><span class="keyword">if</span> check(typed_word):</span><br><span class="line">    <span class="keyword">return</span> typed_word</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    res = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)  <span class="comment"># 使用无穷大表示初始的最小差异</span></span><br><span class="line">    final = typed_word  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> word_list:</span><br><span class="line">        diff = diff_function(typed_word, x, limit)</span><br><span class="line">        <span class="keyword">if</span> diff &lt;= limit <span class="keyword">and</span> diff &lt; res:  <span class="comment"># 更新最小差异和最终结果</span></span><br><span class="line">            res = diff</span><br><span class="line">            final = x</span><br><span class="line">    <span class="keyword">return</span> final  </span><br></pre></td></tr></table></figure><br>看完他的代码我才知道我的“灵光一闪”挺搞笑的，差异值没有原先的小直接不更新就好了，反转更麻烦···，GPT的代码是可以通过所有案例的。<br><img src="https://cdn.jsdelivr.net/gh/Concentration-point/image/20240818164627.png" alt=""><br>结算！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>集中一点</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>容我想想</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/CS61A/"># CS61A</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/08/03/CS61A-Hog%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%84%9F%E6%83%B3/">CS61A Hog复盘及感想</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 集中一点 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
