@@ -13,7 +13,7 @@
 
 
 
-<title>CS61A Hog复盘及感想 | Hexo</title>
+<title>暑假学习感想 | Hexo</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">CS61A Hog复盘及感想</h1>
+            <h1 class="post-title">暑假学习感想</h1>
             
                 <div class="post-meta">
                     
@@ -205,7 +205,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">August 3, 2024&nbsp;&nbsp;20:41:14</a>
+                        Date: <a href="#">August 29, 2024&nbsp;&nbsp;3:03:32</a>
                         </span>
                     
                     
@@ -221,8 +221,16 @@
         </header>
 
         <div class="post-content">
-            <p>按照课表的话，我的进度即将踏入第四周（hw03还没完成），现在才做完Hog，还是因为对这种作业项目还是有点害怕的，但这第一个项目也是很友好，有一点点基础的我只要读了文档要求基本都可以写出来。学到现在这个课程所带给我的震撼真的很大，怎样的夸赞都不为过，为了让你明白文档的要求，课程在问题的下面设置基于ok的选择或问答题帮助你理解。文档虽然是英语的，但只要看多了还是很容易熟悉这些术语的，主要的困难就是长难句不太符合中文的习惯，慢慢阅读和实时翻译是个好办法，翻译软件翻不懂直接复制给GPT解释，还是很好解决的。ok评分机制带给打怪升级的体验，类似<code>Accept</code>的爽点。</p>
-<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>P1陷阱<code>dice()</code>如果传入的是文档中的测试函数，其作为一个表达式使用一次，他的值都会被改变<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过测试的</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">have_one = <span class="literal">False</span></span><br><span class="line"><span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">    a = dice()</span><br><span class="line">    score += a</span><br><span class="line">    <span class="keyword">if</span> a == <span class="number">1</span>:</span><br><span class="line">        have_one = <span class="literal">True</span></span><br><span class="line">    num_rolls -= <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> have_one:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 未通过的</span></span><br><span class="line">    score = <span class="number">0</span></span><br><span class="line">    have_one = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">while</span> num_rolls &gt; <span class="number">0</span>:</span><br><span class="line">        score += dice()</span><br><span class="line">        <span class="keyword">if</span> dice() == <span class="number">1</span>:</span><br><span class="line">            have_one = <span class="literal">True</span></span><br><span class="line">        num_rolls -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> have_one:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> score</span><br></pre></td></tr></table></figure><br>P5中我的源文件在test中05.py这个文件中，文档测试这个r是有问题的。其他的测试点最后都是Game over 只有这个是r ，改过来就测试过了。我以为是文档的问题，但打开我原来下载的安装包又没有问题（还是game over）我也没有改过这个文件···   不知道什么原因，但终究是过了<br><img src="/image/1.png" alt=""><br>操，调了一个半钟的P9，终于想出来了啊啊啊啊啊啊啊啊啊啊哇啊啊啊啊啊<br><img src="/image/2.png" alt=""><br>后面就简单了，成功拿下：<br><img src="/image/3.png" alt=""></p>
+            <p>先介绍一下自身的情况，虽然是在一个双非学校就读数学系，但在这之前我已经修了专业课C语言，C++，python，数据结构了在去年寒假准备算法竞赛学了一些基础算法和数据结构，但比赛拉胯之后道心破碎了（我只是会背一些基础板子，唉，赛前做了一些dfs，bfs自我感觉还不错的），所以本学期的数据结构没听，后面三天速通88分，纯粹的背题考试机器罢了。在暑期到来之前，也是在我考完专业课后十天左右的假期的时候，在b站刷到了upjiangxiangchi的计算机学习路线这一视频，好像不能算是刷，我自己找的，因为马上就大三了，在一个双非学校且因为经济原因放弃考研的我突然意识到毕业即失业的我决定转码。虽然我7月5日就放假了，但我实实在在的假期却是7月20号开始的，中间被那个三下乡志愿折磨的劳心劳力。</p>
+<p>中途折腾了个博客，就是你现在看到的这个，挺好玩的哈哈哈哈。看了《程序是怎样运行的》，前面九章我看得懂，大概对计组有了一点了解，后面三章我的知识就匮乏了···</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>版本是最新的24summer，视频是b站21spring精译版<br>因为之前学习过python，所以前面的学习并没有很困难，直到递归，这玩意在我之前学习的印象中都挺难的，但CS61A关于递归的题目不是很难，可能我学dfs的时候被折磨的多了，写这个就还好。数据抽象，这个概念挺重要的，就是说对于抽象出来的结构不要去破坏他，直接用。在这期间还看了湖科大计算机网络的课，就像网络的协议层一样，上层只管用，下面是如何实现的他不管，下层对上层是完完全全透明的。在看《程序是怎样运行的》里面也有类似的抽象，就怎么说呢，处处都在。后面就是树，面向对象还有SCheme，后面的SQl没看，因为我马上就要修数据库这门课了，我直接去学MySQL了。作业和实验都写了，dic后面几个没写，项目只有Scheme没写，我在学Scheme的时候感觉怪怪的，说实话这一节课老教授讲的云里雾里的，很杂乱，在b站找到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cd4y1P7Th/?spm_id_from=333.999.0.0">爱扑bug的熊</a>这个up讲的挺好的。这里学下来我也没搞明白为什么开头介绍<br><code>&quot;if you don&#39;t know Lisp, you don&#39;t know what it means for a programming language to be powerful and elegant.&quot;</code><br>写这里的作业常常要去数括号的个数···</p>
+<h4 id="用时"><a href="#用时" class="headerlink" title="用时"></a>用时</h4><p>从我7月21日到8月24日，中途两天回家靠个科目一，满打满算用时150个小时左右吧</p>
+<h4 id="学习建议"><a href="#学习建议" class="headerlink" title="学习建议"></a>学习建议</h4><ol>
+<li>在跑测试的时候感觉测试用例很离谱，脱离实际的可以去看看文件夹里的test文档里面看看，有时候可能因为在传输文件夹的时候造成文档的一些错误(我猜的，详情见<a target="_blank" rel="noopener" href="https://concentration-point.github.io/2024/08/03/CS61A-Hog%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%84%9F%E6%83%B3/">CS61A Hog复盘及感想 </a>)还有一次是那个测试文档的代码有好几个案例前面都没有<code>&lt;&lt;&lt;</code>，导致在运行的时候都报错</li>
+<li>善用gpt，写完代码觉得自己写的是屎山代码的可以去给gpt优化一下，让他指出你冗余的原因并改进，看不懂英文文档也可以复制给GPT然后解释问题的需求，我的英语阅读能力自认为还不错，文档内80%可以看懂，但里面有些句子是真的弯弯绕绕，没耐心看就扔给GPT了。(最近六级成绩出来了，没过但阅读190分，是听力的两倍多，听力多些分就过了md，我这就是纯纯的高考应试英语哈哈哈)</li>
+</ol>
+<h4 id="未来的方向"><a href="#未来的方向" class="headerlink" title="未来的方向"></a>未来的方向</h4><p>后面就是捡回自己当初学的算法和数据结构知识，刷leetcode，继续深入了，前两天折腾了一下CS61B的环境，可以提交也有测试分数，但很奇怪代码没错，在IDE跑的答案是对的，在评测网站却是错的···</p>
+<p>我现在准备all in java后端，赶上大三暑假的秋招，混口饭吃，具体什么方向我还不清楚，等这个学期学完吧再说吧，什么数据库spring框架我还一无所知，只能先打好基础边走边看了。</p>
 
         </div>
 
@@ -269,10 +277,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2024/08/18/Cat%E5%A4%8D%E7%9B%98/">Cat复盘</a>
             
-            
-            <a class="next" rel="next" href="/2024/07/29/%E6%98%A8%E6%97%A5%E6%89%80%E6%83%B3%E4%BA%8C%E4%B8%89%E4%BA%8B/">昨日所想二三事</a>
+            <a class="next" rel="next" href="/2024/08/29/Ant/">Ant</a>
             
         </section>
 
