@@ -1,155 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="集中一点">
-
-
-
-
-
-<title>风送长里 | Hexo</title>
-
-
-
-    <link rel="icon" href="/s001.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-    <script>
-        // this function is used to check current theme before page loaded.
-        (() => {
-            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
-            const isDark = currentTheme === 'dark';
-            const pagebody = document.getElementsByTagName('body')[0]
-            if (isDark) {
-                pagebody.classList.add('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
-            } else {
-                pagebody.classList.remove('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Light"
-            }
-        })();
-    </script>
-
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Concentration&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Concentration&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>风送长里 | Hexo</title><meta name="author" content="集中一点"><meta name="copyright" content="集中一点"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="&emsp;&emsp;万圣节当天，临近中午，在床上睡醒没多久刷手机的我接到了爸爸打来的电话，只叫我收拾两套衣服去做高铁回老家，我意识到家里的老人出事了，我急忙收拾好后出了校门口打车，等车过程中我微信问妈妈发生了什么，妈妈回答我说爷爷摔跤了在急救。 &emsp;&emsp;赶到高铁站还是没赶上高铁，33分发车，27分就不让进了，这是我第一次做高铁，我急忙改签，虽说晚了一刻钟左右，但还是坐上了。在高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="风送长里">
+<meta property="og:url" content="http://example.com/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&emsp;&emsp;万圣节当天，临近中午，在床上睡醒没多久刷手机的我接到了爸爸打来的电话，只叫我收拾两套衣服去做高铁回老家，我意识到家里的老人出事了，我急忙收拾好后出了校门口打车，等车过程中我微信问妈妈发生了什么，妈妈回答我说爷爷摔跤了在急救。 &emsp;&emsp;赶到高铁站还是没赶上高铁，33分发车，27分就不让进了，这是我第一次做高铁，我急忙改签，虽说晚了一刻钟左右，但还是坐上了。在高">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2024-11-18T14:03:38.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:24:24.910Z">
+<meta property="article:author" content="集中一点">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "风送长里",
+  "url": "http://example.com/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2024-11-18T14:03:38.000Z",
+  "dateModified": "2025-04-03T18:24:24.910Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "集中一点",
+      "url": "http://example.com/"
     }
-</script>
-            <div class="main">
-                <div class="container">
-    
-    
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
 
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
     
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">风送长里</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">集中一点</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">November 18, 2024&nbsp;&nbsp;22:03:38</a>
-                        </span>
-                    
-                    
-                </div>
-            
-        </header>
-
-        <div class="post-content">
-            <p>&emsp;&emsp;万圣节当天，临近中午，在床上睡醒没多久刷手机的我接到了爸爸打来的电话，只叫我收拾两套衣服去做高铁回老家，我意识到家里的老人出事了，我急忙收拾好后出了校门口打车，等车过程中我微信问妈妈发生了什么，妈妈回答我说爷爷摔跤了在急救。</p>
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '风送长里',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">风送长里</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">风送长里</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-11-18T14:03:38.000Z" title="Created 2024-11-18 22:03:38">2024-11-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-04-03T18:24:24.910Z" title="Updated 2025-04-04 02:24:24">2025-04-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>&emsp;&emsp;万圣节当天，临近中午，在床上睡醒没多久刷手机的我接到了爸爸打来的电话，只叫我收拾两套衣服去做高铁回老家，我意识到家里的老人出事了，我急忙收拾好后出了校门口打车，等车过程中我微信问妈妈发生了什么，妈妈回答我说爷爷摔跤了在急救。</p>
 <p>&emsp;&emsp;赶到高铁站还是没赶上高铁，33分发车，27分就不让进了，这是我第一次做高铁，我急忙改签，虽说晚了一刻钟左右，但还是坐上了。在高铁上，我吃了几个好丽友和牛奶充饥，没什么情绪波动，车窗外，田地，鱼塘，铁轨，房屋快速地向后移动，一如既往的坐车想睡觉，出奇的没有睡着，又拿出平板看了看毛选，快到站时，刚好看到某一篇末尾，没有多想什么。</p>
 <p>&emsp;&emsp;出站等到爸妈开着车来载我，我坐上车喊了两声不在言语，余光中瞥见妈妈泪眼朦胧，我不敢问，更不知道问了之后如何收场，距离家乡还有百来公里，爸爸还在开车，我抱着我的书包目视前方——只有一个失了焦的座椅头 。我也时不时看向窗外，落日很红，像急救信号灯随着路面的遮挡物而闪烁。</p>
 <p>&emsp;&emsp;能见到最后一面吗？此刻倒也由不得你是一名唯物主义者了，佛，上帝，或者最贴潮汕地气的“老爷保号”在我心中浮现。回到县上时，我问是不是要去医院，妈妈跟我说：爷爷已经在家里了。我攥紧我的书包，不自觉的晃起了腿。</p>
@@ -162,65 +171,4 @@
 <p>&emsp;&emsp;爷爷很会做饭，我爸爸也是，但他们之间并没有传承的意味，在我爸爸的讲述里，在那个年代怎么会专门教你做饭，这是历练出来的。故过年回去是我父母在做饭炒菜，唯一需要我爷爷操刀的往往是宵夜，吃的最多的当是炒米粉，因为我想吃。爷爷的炒米粉是一绝，辅料仅白菜、虾米、葱，炒出来的米粉，不包含任何感情，仅从美味去判断，活了快20岁，在我这尚未有人能超越。</p>
 <p>&emsp;&emsp;第二天下午，我跟着灵车送我爷爷去火葬，我负责在搁几秒从车里撒出几张黄纸，路上听到爆竹声，一队两排披着麻衣的人在街上走着，前面有辆车的车顶上整齐地放着四个机枪式的鞭炮，鞭炮声便来源于此。兜兜转转来到了火葬场，披孝服的人还蛮多，爷爷需要等一会才轮到。厂里有四个炉子，横排放置，炉子内部和外部中间隔着一个小门，外面的人把尸体放到带轮子的长方形平台上，往里推进炉子，像是被一张嘴用舌头吞入尸体，最左边的隔间是来装骨灰的地方，人们多聚于此，对这骨灰盒进行各式的工作——铺纸，填胶，封装等等，骨灰盒的款式居然也很多，不同于我爷爷的黑色长条形的，我看到金酒缸形，金葫芦形···。轮到我爷爷了，我看到爷爷被放到炉子上，跪下再次磕了四个头，接着爷爷就被推进去了。</p>
 <p>&emsp;&emsp;我坐在外头的台阶上，不合时宜的撰写着，因为我越来越感觉到自己对于某些事物的感知能力逐渐衰落，或者说是麻木？冷静？漠视？我不知道，我尽可能的感受事件中的我每一时刻身体上的感觉，情绪上的波动，可这种主动的感受势必又会限制了情绪的蔓延，感觉的发展。但我仍写着，是祭奠，是怀念，是为了将来某个淡忘的时刻。夜里风又起，送长里。</p>
-
-        </div>
-
-        
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>集中一点</span>
-                    </p>
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>待到山花烂漫时，她在丛中笑！</span>
-                     </p>
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-            
-            <a class="next" rel="next" href="/2024/08/29/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/">暑假学习感想</a>
-            
-        </section>
-
-
-    </article>
-</div>
-
-            </div>
-            <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© 集中一点 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
-
-    </div>
-</body>
-
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">集中一点</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/">http://example.com/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/08/29/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" title="暑假学习感想"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">暑假学习感想</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">集中一点</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/18/%E9%A3%8E%E9%80%81%E9%95%BF%E9%87%8C/" title="风送长里">风送长里</a><time datetime="2024-11-18T14:03:38.000Z" title="Created 2024-11-18 22:03:38">2024-11-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/29/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" title="暑假学习感想">暑假学习感想</a><time datetime="2024-08-28T19:03:32.000Z" title="Created 2024-08-29 03:03:32">2024-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/29/Ant/" title="Ant">Ant</a><time datetime="2024-08-28T19:02:07.000Z" title="Created 2024-08-29 03:02:07">2024-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/18/Cat%E5%A4%8D%E7%9B%98/" title="Cat复盘">Cat复盘</a><time datetime="2024-08-18T08:51:36.000Z" title="Created 2024-08-18 16:51:36">2024-08-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/03/CS61A-Hog%E5%A4%8D%E7%9B%98%E5%8F%8A%E6%84%9F%E6%83%B3/" title="CS61A Hog复盘及感想">CS61A Hog复盘及感想</a><time datetime="2024-08-03T12:41:14.000Z" title="Created 2024-08-03 20:41:14">2024-08-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 集中一点</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
