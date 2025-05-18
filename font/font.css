@@ -1,0 +1,19 @@
+@font-face{
+    font-family: 'LXGWWenKai-Regular';
+    font-display: swap;
+    src: url('../font/LXGWWenKai-Regular.ttf') format("truetype");
+}
+@font-face{
+    font-family: 'GEORGIA';
+    font-display: swap;
+    src: url('../font/GEORGIA.ttf') format("truetype");
+}
+@font-face{
+    font-family: 'SERIMI-4';
+    font-display: swap;
+    src: url('../font/SERIMI-4.ttf') format("truetype");
+}
+
+body {
+    font-family: 'SERIMI-4','LXGWWenKai-Regular','GEORGIA';
+}
